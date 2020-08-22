@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NoteBucket</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<form>
+    <input type="text" id="noteid" placeholder="Unique Note ID">
+    <input type="text" id="notekey" placeholder="Secret Key">
+</form>
+<br><textarea id="note"></textarea><br><br>
+<button class="g-recaptcha"
+    data-sitekey="6LdJOcAZAAAAAAWVm7g--fAJGLP-3e8YeblaSMBa"
+    data-callback='pull'
+    data-action='submit'>Pull</button>
+<button class="g-recaptcha"
+    data-sitekey="6LdJOcAZAAAAAAWVm7g--fAJGLP-3e8YeblaSMBa"
+    data-callback='push'
+    data-action='submit'>Push</button>
+</body>
+</html>
